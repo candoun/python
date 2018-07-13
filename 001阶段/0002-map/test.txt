@@ -1,0 +1,6 @@
+for APPLICATIONS requiring aware objects, datetime and time objects have an optional time zone information attribute, tzinfo, that can be set to an instance of a subclass of the abstract tzinfo class.
+these tzinfo objects capture information about the offset from UTC time, the time zone name, and whether Daylight Saving Time is in effect.
+note that only one CONCRETE tzinfo class, the timezone class, is supplied by the datetime module.
+the timezone class can represent simple timezones with fixed offset from UTC, such as UTC itself or North American EST and EDT timezones.
+supporting timezones at DEEPER levels of detail is up to the application.
+the rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC.
