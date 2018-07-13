@@ -1,4 +1,6 @@
 # coding=utf-8
+import time
+import datetime
 
 # time & datetime 练习
 '''
@@ -32,23 +34,23 @@ From                       |To                        |Use                      
 seconds since the epoch    |struct_time in UTC        |gmtime(([secs])             |
 seconds since the epoch    |struct_time in local time |localtime(([secs])          |
 struct_time in UTC         |seconds since the epoch   |calendar.timegm()           |
-struct_time in local time  |seconds since the epoch   |mktime()                    |
-struct_time                |Formatting time           |strftime([9-item sequence]) |
+struct_time in local time  |seconds since the epoch   |mktime(t)                   |
+struct_time                |Formatting time           |strftime(t)                 |
 ------------------------------------------------------------------------------------
 '''
 
-import time
-
-#获取时间戳
+# 获取时间戳
 now_timestamp = time.time()
-#获取结构化时间
+# 获取结构化时间
 now_time = time.localtime()
-#格式化时间
+# 格式化时间
 now_ftime = time.strftime('%Y-%m-%d %H:%M:%S', now_time)
-#now_ftime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+# now_ftime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 
 print("当前时间戳:\t", now_timestamp)
 print("当前时间:\t", now_time)
 print("格式化时间:\t", now_ftime)
 
 
+now_time = datetime.datetime.now()
+print(now_time)
