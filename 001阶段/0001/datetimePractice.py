@@ -1,5 +1,4 @@
 # coding=utf-8
-# -*-coding:utf-8-*-
 
 # time & datetime 练习
 '''
@@ -38,16 +37,18 @@ struct_time                |Formatting time           |strftime([9-item sequence
 ------------------------------------------------------------------------------------
 '''
 
-import datetime, time, calendar
+import time
 
+#获取时间戳
 now_timestamp = time.time()
+#获取结构化时间
 now_time = time.localtime()
-#utc_time = calendar.timegm()
-now_ftime = time.strftime('%Y-%m-%d %H:%M:%S')
-#now_ftime=time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+#格式化时间
+now_ftime = time.strftime('%Y-%m-%d %H:%M:%S', now_time)
+#now_ftime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 
-print("当前时间戳:\t%s".decode('UTF-8').encode('GBK') % now_timestamp)
-print("当前时间:\t%s".decode('UTF-8').encode('GBK') % now_time)
-print("格式化时间:\t%s".decode("UTF-8").encode("GBK") % now_ftime)
+print("当前时间戳:\t", now_timestamp)
+print("当前时间:\t", now_time)
+print("格式化时间:\t", now_ftime)
 
 
