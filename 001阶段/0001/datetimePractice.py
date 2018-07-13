@@ -1,6 +1,7 @@
+# coding=utf-8
 # -*-coding:utf-8-*-
 
-# datetime 练习
+# datetime 缁冧範
 import datetime
 
-print("当前时间: %s" %datetime.datetime.now())
+print("褰撳墠鏃堕棿: %s".decode('UTF-8').encode('GBK') %datetime.datetime.now())
