@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: prism-redis
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: prism-redis
+  template:
+    metadata:
+      labels:
+        name: prism-redis
+    spec:
+      imagePullSecrets:
+      - name: prismharbor
+      containers:
+      - name: prism-redis
+        image: harbor.paic.com.cn/sis-itil/sis-itil-prism-redis:20180626
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
