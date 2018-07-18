@@ -17,7 +17,7 @@ spec:
       - name: prismharbor
       containers:
       - name: prism-redis
-        image: harbor.paic.com.cn/sis-itil/sis-itil-prism-redis:20180626
+        image: xxxxx.com.cn/yyyyy/zzz-redis:20180626
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
